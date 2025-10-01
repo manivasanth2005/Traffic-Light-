@@ -1,0 +1,80 @@
+const int r1=2;
+const int r2=3;
+const int y1=4;
+const int y2=5;
+const int g1=6;
+const int g2=7;
+const int r3=8;
+const int r4=9;
+const int y3=10;
+const int y4=11;
+const int g3=12;
+const int g4=13;
+void setup(){
+    pinMode(r1,OUTPUT);
+    pinMode(r2,OUTPUT);
+    pinMode(y1,OUTPUT);
+    pinMode(y2,OUTPUT);
+    pinMode(g1,OUTPUT);
+    pinMode(g2,OUTPUT);
+    pinMode(r3,OUTPUT);
+    pinMode(r4,OUTPUT);
+    pinMode(y3,OUTPUT);
+    pinMode(y4,OUTPUT);
+    pinMode(g3,OUTPUT);
+    pinMode(g4,OUTPUT);}
+void loop(){
+  int x[4]={r1,r2,r3,r4};
+   for(int i=0;i<4;i++){
+        
+        if(x[i]==r1){
+            digitalWrite(g4,HIGH);
+            digitalWrite(r2,HIGH);
+            digitalWrite(r3,LOW);
+            digitalWrite(y3,HIGH);
+            digitalWrite(y4,HIGH);
+            digitalWrite(g3,HIGH);
+            digitalWrite(r4,LOW);
+            digitalWrite(r1,LOW);
+             digitalWrite(y1,LOW);
+            digitalWrite(g1,HIGH);
+            delay(30000);}
+      else if(x[i]==r2){
+            digitalWrite(y3,HIGH);
+            digitalWrite(y4,HIGH);
+            digitalWrite(g3,HIGH);
+            digitalWrite(g4,HIGH);
+            digitalWrite(g1,LOW);
+            digitalWrite(r1,HIGH);
+            digitalWrite(r2,LOW);
+            digitalWrite(r3,LOW);
+            digitalWrite(r4,LOW);
+            digitalWrite(y2,HIGH);
+            delay(3000);
+             digitalWrite(y2,LOW);
+            digitalWrite(g2,HIGH);
+            delay(10000);}
+     else if(x[i]==r3){
+            digitalWrite(g2,LOW);
+            digitalWrite(r3,HIGH);
+            digitalWrite(r1,HIGH);
+            digitalWrite(r2,HIGH);
+            digitalWrite(r4,LOW);
+            digitalWrite(y3,LOW);
+            delay(3000);
+            digitalWrite(y3,HIGH);
+            digitalWrite(g3,LOW);
+            delay(25000);}
+    else {
+            digitalWrite(g3,HIGH);
+            digitalWrite(r1,HIGH);
+            digitalWrite(r2,HIGH);
+            digitalWrite(r3,LOW);
+            digitalWrite(r4,HIGH);
+            digitalWrite(y4,LOW);
+            delay(3000);
+            digitalWrite(y4,HIGH);
+            digitalWrite(g4,LOW);
+            delay(20000);}
+   }
+   }
